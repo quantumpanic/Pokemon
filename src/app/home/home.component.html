@@ -1,0 +1,7 @@
+<div class="searchbar-container">
+    <input [(ngModel)]="searchTerm" (input)="searchItems()" placeholder="Search Pokemon" />
+</div>
+
+<div *ngFor="let item of filteredItems">
+    <div class="data-item" (click)="itemDetail(item.name,item.url)">{{item.name}}</div>
+</div>

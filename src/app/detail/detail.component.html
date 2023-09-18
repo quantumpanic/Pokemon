@@ -1,0 +1,9 @@
+<div class="detail-topbar">
+    {{name}}
+</div>
+<img [src]="spriteUrl" (error) ="changeSource($event)" class="sprite">
+
+<div class="detail-topbar">Abilities</div>
+<div *ngFor="let ability of abilities">
+    <div class="ability-item">{{ability.ability.name}}</div>
+</div>
